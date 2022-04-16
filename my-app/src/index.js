@@ -41,7 +41,7 @@ ReactDOM.render(
 const names = ['Sevde', 'Semih', 'Misha']
 
 function App3() {
-    return ( // jsx yapisini düzenli olarak döndürebilmek icin hepsini tek ir parent elemente koyariz
+    return ( // jsx yapisini düzenli olarak döndürebilmek icin hepsini tek bir parent elemente koyariz
         <div>
             {names.map(name => (<h3> - {name} </h3>))}
         </div>
@@ -85,12 +85,23 @@ const App5 = () => {
         <div>
             <div className="card-group">
 
-                < Card cardTitle="Trabzonspor"/>
+                < Card  cardTitle="Card Title 1" 
+                        cardText="Lorem Ipsum Text 1" 
+                        updatedTime="Last Updates 1 min ago"
+                        image="https://picsum.photos/id/14/200"
+                />
 
-                < Card cardTitle="Bursaspor"/>
+                < Card  cardTitle="Card Title 2" 
+                        cardText="Lorem Ipsum Text 2" 
+                        updatedTime="Last Updates 2 min ago"
+                        image="https://picsum.photos/id/250/200"
+                />
 
-                < Card cardTitle="Samsunspor"/>
-                
+                < Card  cardTitle="Card Title 3" 
+                        cardText="Lorem Ipsum Text 3" 
+                        updatedTime="Last Updates 3 min ago"
+                        image="https://picsum.photos/id/1050/200"
+                />
             </div>
         </div>
     )
