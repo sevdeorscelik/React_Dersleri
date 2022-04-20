@@ -1,5 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+//import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client';
 
 import Card from './components/card.js'
 import Collapse from './components/collapse.js';
@@ -71,9 +72,16 @@ const App = () => {
         </div>
     )
 }
-
+/*
 ReactDOM.render(
     <App />,
     document.getElementById('root')
 )
+*/
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
+<App/>
+);
 
