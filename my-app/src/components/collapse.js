@@ -3,11 +3,13 @@ import React from 'react';
 
 class Collapse extends React.Component {
 
-    constructor() {
-        super();
+    //constructor'i siliyoruz. ayni isi yapiyor silersek de
+    //constructor() {
+        //super();
 
-        this.state = {
-            showContent: true
+        //this.
+        state = {
+            showContent: false
         }
         /*1.yol
         this.showMore = () => {
@@ -19,8 +21,8 @@ class Collapse extends React.Component {
         */
 
 
-    }
-
+    //}
+        //3.yol
     showMore = () => {
        //this burada calisir
        this.setState({showContent:!this.state.showContent})
@@ -34,19 +36,29 @@ class Collapse extends React.Component {
     }
     */
 
+    componentDidMount(){
+        console.log('Component olusturuldu'); //3 tane Component olusturuldu verir
+    }
+
+    componentDidUpdate(){
+        console.log('component güncellendi');//her tikladigimda component güncellendi veriyor.
+    }
+
 
     render() {
         return (
             <div>
                 <button className="btn btn-primary w-100" onClick={this.showMore}>
-                    Link with href
+                    { console.log(this)} 
+                    {/*this.props.children.props.cardTitle*/}
+                    {React.Children.map(this.props.children, children => children.props.cardTitle)}
                 </button>
 
                 {
                     this.state.showContent ? (
                         <div className="collapse show" >
-                            {this.props.children}
-
+                            {/*this.props.children*/}
+                            {React.Children.map(this.props.children, children => children)}
                         </div>
                     ) : null
                 }
