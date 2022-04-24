@@ -1,0 +1,27 @@
+body {
+  .App {
+    padding: 20px;
+    background-color: #333;
+    
+    
+      header{
+        background-color: pink;
+      }
+      main{
+        border: solid 5px blueviolet;
+        background-color: blueviolet;
+
+        .tech-list{
+          background-color: skyblue;
+        }
+        .user-card{
+          background-color: yellow;
+        }
+      }
+
+      footer{
+        background-color: red;
+
+      }
+  }
+}
