@@ -13,6 +13,12 @@ function App() {
         isLoggedIn={true}
         age={28}
         friends={['Semih', 'Zeynep', 'Kübra', 'Sevde']}
+        /*
+        address = { {
+          title:"Hemer-De",
+          zip: 58675
+        } }
+        */
       />
 
     </>
