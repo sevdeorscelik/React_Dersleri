@@ -42,7 +42,13 @@ User.prototypes = {
         zip : PropTypes.number,
     })
     */
+};
+
+User.defaultProps = {
+    isLoggedIn: false   //varsayilan olarak true alir, eger girilmis bir deger yoksa true olur
 }
+
+
 export default User
 
 //NEDEN ADDRESS PORP'U EKLEYEMEDIM. CALISMIYOR???
