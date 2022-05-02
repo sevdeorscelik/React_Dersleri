@@ -12,7 +12,7 @@ function App() {
     setName('Semih')
     setAge(29)
     setFriends([...friends, 'seyma'])
-    setAddress({...address, title:'title'})
+    setAddress({...address, city:'title'})
   }
 
 
