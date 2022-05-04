@@ -1,34 +1,45 @@
 import React from "react";
 import { useState } from "react";
 
-const List = ({contacts}) => {
+const List = ({ contacts }) => {
 
     const [filterText, setFilterText] = useState('')
+    const [toggle, setToggle] = useState(false)
 
-    const filtered = contacts.filter((item)=>{
-        return Object.keys(item).some((key)=>{
-            return  item[key].toString().toLowerCase().includes(filterText.toLocaleLowerCase());
+    const filtered = contacts.filter((item) => {
+        return Object.keys(item).some((key) => {
+            return item[key].toString().toLowerCase().includes(filterText.toLocaleLowerCase());
         })
     })
 
-    console.log('filtertext', filtered);
+    const showNumber = (e) => {
+        setToggle(!toggle)
+    }
 
-    
+
 
     return (
         <div>
-            <input 
-                placeholder="Filter contact" 
-                value={filterText} 
-                onChange={(e)=> setFilterText(e.target.value)}
+            <input
+                placeholder="Filter contact"
+                value={filterText}
+                onChange={(e) => setFilterText(e.target.value)}
             />
-            <ul>
+            <ul className="list">
                 {
                     filtered.map((contact, index) => (
-                        <li key={index}>{contact.fullname}</li>
+                        <li key={index} onClick={showNumber} >
+                            {contact.fullname}
+                            {toggle && (
+                                <p>tel: ( {contact.phone_number} )</p>
+                            )}
+                        </li>
+
                     ))
                 }
+
             </ul>
+            <p className="total">Total contacts : ( {filtered.length} )</p>
         </div>
     )
 };

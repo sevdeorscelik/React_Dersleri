@@ -1,0 +1,39 @@
+#container{
+    width: 400px;
+    padding: 20px;
+    border: solid 1px #eee;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 5px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list{
+    margin: 15px 0;
+}
+
+.list li{
+    background-color: #666;
+    padding: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.btnAdd{
+    margin-top: 15px;
+    cursor: pointer;
+    float: right;
+}
+
+.total{
+    text-align: end;
+}
