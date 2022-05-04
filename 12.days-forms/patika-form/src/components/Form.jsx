@@ -41,6 +41,7 @@ const Form = ({addContact,  contacts}) => {
             <div>
                 <input 
                     name="fullname" 
+                    type="text"
                     placeholder="Fullname..." 
                     value={form.fullname}
                     onChange={onChangeInput}
@@ -49,6 +50,7 @@ const Form = ({addContact,  contacts}) => {
             <div>
                 <input
                     name="phone_number" 
+                    type="number"
                     placeholder="Phone Number..." 
                     onChange={onChangeInput}
                     value={form.phone_number}

@@ -29,10 +29,9 @@ const List = ({ contacts }) => {
                 {
                     filtered.map((contact, index) => (
                         <li key={index} onClick={showNumber} >
-                            {contact.fullname}
-                            {toggle && (
-                                <p>tel: ( {contact.phone_number} )</p>
-                            )}
+                            {contact.fullname} 
+                            {toggle && ` - ${contact.phone_number}`
+                            }
                         </li>
 
                     ))

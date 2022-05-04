@@ -1,7 +1,14 @@
 #container{
-    width: 400px;
-    padding: 20px;
-    border: solid 1px #eee;
+    width: 70rem;
+    padding: 50px;
+    border: double 10px #363062;
+    border-radius: 40px;
+    background-color: #92BA92;
+    
+}
+
+h1{
+    color: #363062;
 }
 
 input{
@@ -9,20 +16,25 @@ input{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     padding: 5px;
+    font-size: 1.7rem;
+    background-color: #1D5C63;
+    
+    
 }
-
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+input::placeholder{
+    color: #92BA92;;
 }
 
 .list{
     margin: 15px 0;
+    padding: 0;
 }
 
 .list li{
-    background-color: #666;
+    
+    list-style: none;
+    color: #525E75;
+    background-color: #F1DDBF;
     padding: 5px;
     margin-bottom: 3px;
     cursor: pointer;
@@ -32,8 +44,10 @@ ul, li {
     margin-top: 15px;
     cursor: pointer;
     float: right;
+    font-size: 2rem;
 }
 
 .total{
     text-align: end;
+    color: #1D5C63;
 }
