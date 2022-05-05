@@ -46,7 +46,6 @@ input {
     border: solid 1px #1D5C63;
     border-radius: 15px;
 
-
 }
 
 input::placeholder {
@@ -65,8 +64,14 @@ input::placeholder {
 }
 
 .lists {
-    
     display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    border-bottom: solid 1px #1D5C63;
+    align-items: center;
+}
+
+.lists * {
     
 }
 
@@ -76,16 +81,21 @@ input::placeholder {
 }
 
 .list li {
-    width: 40rem;
+    width: 10rem;
     list-style: none;
     color: #1D5C63;
 
     padding: 5px;
     margin-bottom: 3px;
     cursor: pointer;
-    border-bottom: solid 1px #1D5C63;
-
     
+}
+
+.phoneNum{
+    width: 20rem;
+}
+.del{
+    cursor: pointer;
 }
 
 .btnAdd {
@@ -95,7 +105,6 @@ input::placeholder {
     font-size: 1.5rem;
     padding: 5px 15px;
     font-weight: bold;
-    
 }
 
 .total {

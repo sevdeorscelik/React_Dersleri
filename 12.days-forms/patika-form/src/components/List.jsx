@@ -13,6 +13,8 @@ const List = ({ contacts }) => {
     })
 
     const showNumber = (e) => {
+        console.log(e.target);
+
         setToggle(!toggle)
     }
 
@@ -31,11 +33,12 @@ const List = ({ contacts }) => {
                         <div className="lists">
                             <li key={index} onClick={showNumber} >
                                 {contact.fullname}
-                                {toggle && ` - ${contact.phone_number}`
-                                }
-
+                                
                             </li>
-                            <div>x</div>
+                            {toggle && (
+                                <div className="phoneNum">{contact.phone_number}</div>
+                            )}
+                            <div className="del" >x</div>
                         </div>
 
 
