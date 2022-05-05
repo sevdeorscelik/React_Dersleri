@@ -19,7 +19,7 @@ const List = ({ contacts }) => {
 
 
     return (
-        <div>
+        <div className="listCont">
             <input
                 placeholder="Filter contact"
                 value={filterText}
@@ -28,17 +28,22 @@ const List = ({ contacts }) => {
             <ul className="list">
                 {
                     filtered.map((contact, index) => (
-                        <li key={index} onClick={showNumber} >
-                            {contact.fullname} 
-                            {toggle && ` - ${contact.phone_number}`
-                            }
-                        </li>
+                        <div className="lists">
+                            <li key={index} onClick={showNumber} >
+                                {contact.fullname}
+                                {toggle && ` - ${contact.phone_number}`
+                                }
+
+                            </li>
+                            <div>x</div>
+                        </div>
+
 
                     ))
                 }
 
             </ul>
-            <p className="total">Total contacts : ( {filtered.length} )</p>
+            <p className="total">Total contacts :  {filtered.length} </p>
         </div>
     )
 };

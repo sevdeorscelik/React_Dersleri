@@ -24,7 +24,7 @@ const Form = ({addContact,  contacts}) => {
         e.preventDefault()
 
         if(form.fullname === '' || form.phone_number === ''){
-            return false;
+            alert('Please fill in the blanks !')
         }
 
         addContact([...contacts,form])
@@ -36,9 +36,10 @@ const Form = ({addContact,  contacts}) => {
 
 
     return (
-        <form onClick={onSubmit}>
+        <form >
 
             <div>
+                
                 <input 
                     name="fullname" 
                     type="text"
@@ -57,7 +58,7 @@ const Form = ({addContact,  contacts}) => {
                 />
             </div>
             <div>
-                <button className="btnAdd" >Add</button>
+                <button onClick={onSubmit} className="btnAdd" >Add</button>
             </div>
 
         </form>

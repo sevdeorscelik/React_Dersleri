@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+
+
 body{
   background-color: #525E75;
   font-size: 2rem;
   /*font-family: 'Koulen', cursive;*/
-  font-family: 'Prosto One', cursive;
+  /*font-family: 'Prosto One', cursive;*/
 }
 
 .App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
