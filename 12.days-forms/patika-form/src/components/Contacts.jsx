@@ -11,7 +11,7 @@ function Contacts() {
     const[contacts, setContacts] = useState([
         {
             fullname:'Sevde',
-            phone_number:'123123'
+            phone_number:'+49 176 3044 8092'
         },{
             fullname:'Ayse',
             phone_number:'456456'

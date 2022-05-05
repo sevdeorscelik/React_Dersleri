@@ -23,6 +23,7 @@ const List = ({ contacts }) => {
     return (
         <div className="listCont">
             <input
+            className="filterInput"
                 placeholder="Filter contact"
                 value={filterText}
                 onChange={(e) => setFilterText(e.target.value)}
