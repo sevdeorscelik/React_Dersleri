@@ -10,14 +10,14 @@ function Contacts() {
     //kayitlarin eklenecegi state:
     const[contacts, setContacts] = useState([
         {
-            fullname:'Sevde',
-            phone_number:'+49 176 3044 8092'
+            fullname:'Max Mustermann',
+            phone_number:'+49 12345678900'
         },{
-            fullname:'Ayse',
-            phone_number:'456456'
+            fullname:'Sevde Örscelik',
+            phone_number:'017630458794'
         },{
-            fullname:'Ali',
-            phone_number:'789789'
+            fullname:'Semih Örscelik',
+            phone_number:'05694123687'
         }
     ])
 

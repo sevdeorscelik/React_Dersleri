@@ -3,7 +3,7 @@
 
 
 #container {
-    width: 50%rem;
+    width: 50rem;
     padding: 50px;
     border: double 10px #363062;
     border-radius: 40px;
@@ -67,7 +67,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     border-left: solid 1px #1D5C63;
-    width: 50%;
+    width: 100%;
 
 
 }
@@ -178,9 +178,9 @@ input {
     }
 }
 
-@media screen and (max-width: 846px) {
+@media screen and (max-width: 940px) {
     #container {
-        width: 100%%;
+        width: 80%;
     }
 }
 

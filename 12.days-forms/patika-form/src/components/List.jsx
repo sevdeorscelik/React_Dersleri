@@ -32,14 +32,16 @@ const List = ({ contacts }) => {
                 {
                     filtered.map((contact, index) => (
                         <div className="lists">
+                            
                             <li key={index} onClick={showNumber} >
                                 {contact.fullname}
                                 
                             </li>
+                            
                             {toggle && (
                                 <div className="phoneNum">{contact.phone_number}</div>
                             )}
-                            <div className="del" >x</div>
+                            
                         </div>
 
 
