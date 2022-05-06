@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+}
+*{
+  margin: 10px 5px;
+}
+
+nav{
+  background-color: bisque;
+  
+}
+
+
+
+footer{
+  background-color: #333;
+  color: #eee;
+}
