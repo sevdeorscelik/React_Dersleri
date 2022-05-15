@@ -1,0 +1,108 @@
+@import "components/UserForm";
+@import "components/OrderForm";
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  background: #8a8ac1;
+}
+
+h1,h2,h3,h4{
+  margin-top: 0;
+}
+
+.step{
+  background: #cdcdfd;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 30px;
+  border: 1px solid black;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 4px;
+  border: 1px solid black;
+  transition: all .4s ease-in-out;
+  background: #aeaee3;
+  cursor: pointer;
+  &:hover{
+    color: white;
+    background-color: black;
+  }
+  &.invalid{
+    background-color: #cdcdcd;
+    opacity: .3;
+    cursor: not-allowed;
+    &:hover{
+      color: inherit;
+      background: #aeaee3;
+    }
+  }
+}
+
+.range-input-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  label{
+    flex-basis: 20%;
+  }
+  input[type="range"]{
+    flex-basis: 50%;
+  }
+  input[type="number"]{
+    flex-basis: 15%;
+  }
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  position: relative;
+  .top{
+    display: flex;
+    label{
+      flex-basis: 20%;
+    }
+    input{
+      flex-grow: 1;
+    }
+  }
+  .msg{
+    bottom: 11px;
+    background: #aeaee3;
+    padding: 3px 5px;
+    font-size: 13px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.btn-list{
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  .btn{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 0px 10px;
+    align-items: center;
+    &:nth-of-type(1){
+      margin-left: 0;
+    }
+    &:nth-last-of-type(1){
+      margin-right: 0;
+    }
+  }
+}
