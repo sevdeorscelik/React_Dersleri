@@ -1,10 +1,11 @@
+import { useContext } from "react";
 import { createContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext()
 
 
 
-export const ThemeProvider = ({ children }) => {
+const ThemeProvider = ({ children }) => {
 
     const [theme, setTheme] = useState(localStorage.getItem("theme") || 'light') // localStorage'de bir sey yoksa light olsun anlamina gelir
 
@@ -26,4 +27,10 @@ export const ThemeProvider = ({ children }) => {
 
 //daha okunabilir olsun diye themeContext.Provider'i buraya aldik ve app.js'deki verileri children araciligi ile buraya aktardik
 
-export default ThemeContext
+//her defasinda useContext import etmemek icin bazi degisiklikler yapacagiz:
+
+//export default ThemeContext
+
+const useTheme = () => useContext(ThemeContext)
+
+export { useTheme, ThemeProvider}

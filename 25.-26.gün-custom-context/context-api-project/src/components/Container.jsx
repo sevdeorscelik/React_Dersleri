@@ -1,5 +1,5 @@
-import {useContext} from 'react'
-import ThemeContext from '../context/ThemeContext'
+//import ThemeContext from '../context/ThemeContext'
+import { useTheme } from '../context/ThemeContext'
 import Button from './Button'
 import Header from './Header'
 import Profile from './Profile'
@@ -7,7 +7,9 @@ import Profile from './Profile'
 
 function Container() {
 
-const {theme, setTheme} = useContext(ThemeContext)
+//const {theme, setTheme} = useContext(ThemeContext)
+const {theme, setTheme} = useTheme()
+
 
     return (
         <div className={`Container ${theme === "dark" && "dark" }`}> 

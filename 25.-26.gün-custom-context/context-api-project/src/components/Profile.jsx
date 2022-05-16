@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { useContext } from "react"
-import UserContext from "../context/UserContext";
+import { useState } from "react"
+import { useUser } from "../context/UserContext";
 
 
 const Profile = () => {
@@ -8,7 +7,8 @@ const Profile = () => {
     //const data = useContext(UserContext)
     //console.log(data);
 
-    const { user, setUser } = useContext(UserContext)
+    //const { user, setUser } = useContext(UserContext)
+    const { user, setUser } = useUser()
 
 
     const handleLogin = () => {

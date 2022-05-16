@@ -1,6 +1,6 @@
 //giris yapmis kullanici ile ilgili bilgileri bu context'e tutacagiz
 
-import { createContext, useState } from 'react'
+import { createContext, useState, useContext } from 'react'
 
 const UserContext = createContext()
 
@@ -31,4 +31,8 @@ export const UserProvider = ({ children }) => {
     )
 }
 
-export default UserContext
+export const useUser = () => useContext(UserContext)
+//custom context yapabilmek icin :
+//export default UserContext
+
+

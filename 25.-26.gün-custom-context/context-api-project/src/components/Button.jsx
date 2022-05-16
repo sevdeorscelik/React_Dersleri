@@ -1,10 +1,13 @@
 import { useContext } from 'react'
-import ThemeContext from '../context/ThemeContext'
+//import ThemeContext from '../context/ThemeContext'
+import { useTheme } from '../context/ThemeContext';
 
 
 function Button() {
 
-    const data = useContext(ThemeContext) //const {theme, setTheme} = useContext(ThemeContext) seklinde de yazabiliriz. bu sekilde yazarsak her seferinde data.theme degil direkt theme yada setTheme yazabrak kullanabiliriz
+    const data = useTheme()
+    //const data = useContext(ThemeContext) 
+    //const {theme, setTheme} = useContext(ThemeContext) seklinde de yazabiliriz. bu sekilde yazarsak her seferinde data.theme degil direkt theme yada setTheme yazabrak kullanabiliriz
     console.log(data);
 
     
