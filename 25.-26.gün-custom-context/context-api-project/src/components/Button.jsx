@@ -7,8 +7,11 @@ function Button() {
     const data = useContext(ThemeContext)
     console.log(data);
     return (
-        <div>
-            Button
+        <div className='Button'>
+            <div>
+                Button - {data}
+            </div>
+           
         </div>
     )
 
