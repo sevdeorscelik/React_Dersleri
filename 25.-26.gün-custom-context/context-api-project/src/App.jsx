@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-import ThemeContext from './context/ThemeContext'
 import Button from './components/Button'
+import Header from './components/Header'
 
 import {ThemeProvider} from './context/ThemeContext'
 
 
 function App() {
 
+
+
   return (
     <div className="App">
       <ThemeProvider>
-        <Button></Button>
+        <Header />
+        <Button />
       </ThemeProvider>
     </div>
   )
