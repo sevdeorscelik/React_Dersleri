@@ -4,4 +4,16 @@
 
 label{
   display: block;
+  margin-top: 1.5rem;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button{
+  margin-top: 2rem;
 }

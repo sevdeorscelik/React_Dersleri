@@ -1,70 +1,73 @@
-import { Formik } from 'formik';
-import validations from './validation'
-
+import { Formik, useFormik } from 'formik';
+import validations from './Validations'
 
 const Signup = () => {
 
+    const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+            confirmPassword: ''
+        },
+        onSubmit: (values) => {
+            console.log(values);
+        },
+        validationSchema: validations
+    })
 
     return (
         <div className="Signup">
             <h1>Sign Up</h1>
 
-            <Formik
-                initialValues={{
-                    email: '',
-                    password: "",
-                    passwordConfirm: ""
-                }}
-                onSubmit={(values) => {
-                    console.log(values);
-                }}
-            >
+            <form onSubmit={handleSubmit}>
 
-                {
-                    ({ handleSubmit, handleChange, values }) => {
-                        return (
-                            <form onSubmit={handleSubmit}>
+                {/*input ********************************************************/}
 
-                                <label >Email : </label>
-                                <input
-                                    onChange={handleChange}
-                                    name="email"
-                                    value={values.email}
-                                    type="email"
-                                />
-                                <br /><br />
-
-                                <label>Password : </label>
-                                <input
-                                    onChange={handleChange}
-                                    name="password"
-                                    value={values.password}
-                                    type="password"
-                                />
-                                <br /><br />
-
-                                <label>Confirm Password : </label>
-                                <input
-                                    onChange={handleChange}
-                                    name="passwordConfirm"
-                                    value={values.passwordConfirm}
-                                />
-                                <br /><br />
+                <label htmlFor="email">Email</label>
+                <input
+                    onChange={handleChange}
+                    id="email"
+                    name="email"
+                    placeholder="jane@acme.com"
+                    type="email"
+                    value={values.email}
+                    onBlur={handleBlur}
+                />
+                { errors.email && touched.email && (
+                <div>{errors.email}</div>
+                )}
 
 
-                                <button type="submit">Submit</button>
+                <label htmlFor="password">Password</label>
+                <input
+                    onChange={handleChange}
+                    id="password"
+                    name="password"
+                    placeholder="*****"
+                    type="password"
+                    value={values.password}
+                    autoComplete="off"
+                    onBlur={handleBlur}
+                />
+                { errors.password && touched.password && (<div>{errors.password}</div>)}
 
-                                <br /><br />
+                <label htmlFor="password">Confirm Password</label>
+                <input
+                    onChange={handleChange}
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="*****"
+                    type="password"
+                    value={values.confirmPassword}
+                    autoComplete="off"
+                    onBlur={handleBlur}
+                />
+                { errors.confirmPassword && touched.confirmPassword && (<div>{errors.confirmPassword}</div>)}
 
-                                <code> {JSON.stringify(values)} </code>
+                <button type="submit">Submit</button>
 
-
-                            </form>
-                        )
-                    }
-                }
-
-            </Formik>
+                <code> {JSON.stringify(values)} </code>
+            </form>
 
         </div>
     )
