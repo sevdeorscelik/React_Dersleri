@@ -11,9 +11,13 @@ function Home() {
     <div>
       This is a home page
       <br />
-      <button onClick={()=>{
+      <button onClick={() => {
         navigate('/profile/:sevde')
       }}>to Sevde</button>
+
+      <button onClick={() => {
+        navigate('/profile/:semih')
+      }}>to Semih</button>
     </div>
   )
 }

@@ -9,12 +9,13 @@ function Profile() {
   return (
   <div>
     This is a profil page for {username}
+
     <button onClick={()=>{
-        navigate('/about')
+        navigate('/home')
     }}
     >
     {' '}
-    Change to about page</button>
+    back to home</button>
   </div>
   )
 }
